@@ -1,1 +1,1 @@
-__all__ = ['FrontEndExceptions', 'simCoreExceptions', 'analysisExceptions']
+__all__ = ['frontEndExceptions', 'simCoreExceptions', 'analysisExceptions']
