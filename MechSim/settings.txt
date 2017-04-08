@@ -1,0 +1,2 @@
+MechSim_installDirectory = ""
+MechSim_version = ""
