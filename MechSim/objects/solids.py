@@ -41,7 +41,6 @@ class rectangle():
 
 	def quickCollision(self, point):
 		collision = False
-		#not good enough collision detection -> if every point needs detection
 		if point[0] > self.quickCollisionXDim[0] and point[0] < self.quickCollisionXDim[1]:
 			if point[1] > self.quickCollisionYDim[0] and point[1] < self.quickCollisionYDim[1]:
 				if point[2] > self.quickCollisionZDim[0] and point[2] < self.quickCollisionZDim[1]:
@@ -52,4 +51,3 @@ class rectangle():
 				pass
 		else:
 			pass
-		
