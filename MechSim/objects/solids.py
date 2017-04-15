@@ -17,7 +17,7 @@ class rectangle():
 		self.dim = dim
 		self.motT = motT
 		self.motR = motR
-		setPoint(pos, posR, dim)
+		self.setPoint(pos, posR, dim)
 		#this determines which of the points is the most far out
 		self.xPointArray = [self.A[0], self.B[0], self.C[0], self.D[0], self.E[0], self.F[0], self.G[0], self.H[0]]
 		self.xPointArray.sort()
@@ -39,11 +39,11 @@ class rectangle():
 		self.G = [((self.pos[0] - self.dim[0]/2) * math.cos(self.posR[0])), ((self.pos[1] + self.dim[1]/2) * math.cos(self.posR[1])), ((self.pos[2] + self.dim[2]/2) * math.cos(self.posR[2]))]
 		self.H = [((self.pos[0] + self.dim[0]/2) * math.cos(self.posR[0])), ((self.pos[1] + self.dim[1]/2) * math.cos(self.posR[1])), ((self.pos[2] + self.dim[2]/2) * math.cos(self.posR[2]))]
 
-	def quickCollision(self, quickCollisionXDimB, quickCollisionYDimB, quickCollisionZDimB):
+	def quickCollision(self, objectB):
 		collision = False
-		if self.quickCollisionXDim[0] < quickCollisionXDimB[1] and self.quickCollisionXDim[1] > quickCollisionXDimB[0]:
-			if self.quickCollisionYDim[0] < quickCollisionYDimB[1] and self.quickCollisionYDim[1] > quickCollisionYDimB[0]:
-				if self.quickCollisionZDim[0] < quickCollisionZDim[1] and self.quickCollisionZDim[1] > quickCollisionZDimB[0]:
+		if self.quickCollisionXDim[0] < objectB.quickCollisionXDim[1] and self.quickCollisionXDim[1] > objectB.quickCollisionXDim[0]:
+			if self.quickCollisionYDim[0] < objectB.quickCollisionYDim[1] and self.quickCollisionYDim[1] > objectB.quickCollisionYDim[0]:
+				if self.quickCollisionZDim[0] < objectB.quickCollisionZDim[1] and self.quickCollisionZDim[1] > objectB.quickCollisionZDim[0]:
 					collision = True
 				else:
 					pass
